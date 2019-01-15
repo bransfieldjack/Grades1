@@ -14,6 +14,11 @@ namespace Grades1
             grades = new List<float>();
         }
 
+        public GradeStatistics ComputeStatistics()
+        {
+            return new GradeStatistics();
+        }
+
         public void AddGrade(float grade)
         {
             grades.Add(grade);
