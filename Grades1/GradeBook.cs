@@ -16,7 +16,18 @@ namespace Grades1
 
         public GradeStatistics ComputeStatistics()
         {
-            return new GradeStatistics();
+            GradeStatistics stats = new GradeStatistics();
+            stats.HighestGrade = 0;
+
+            float sum = 0;
+            foreach (float grade in grades)
+            {
+                stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
+                stats.LowestGrade = Math.Min(grade, stats.LowestGrade);
+                sum += grade;
+            }
+            stats.AverageGrade = sum / grades.Count;    //Divides the sum of grades by the number of grades stored. 
+            return stats;
         }
 
         public void AddGrade(float grade)
