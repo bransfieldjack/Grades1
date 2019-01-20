@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grades1
 {
-    class GradeBook
+    public class GradeBook
     {
 
         public GradeBook()  //Class constructor sets initial values. 
