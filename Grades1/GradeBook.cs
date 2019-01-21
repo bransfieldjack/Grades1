@@ -37,6 +37,7 @@ namespace Grades1
 
         List<float> grades ;
 
+        public object Name { get; set; }
     }
 }
  
